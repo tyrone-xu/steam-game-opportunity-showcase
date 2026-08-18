@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Steam 游戏机会初筛 Agent 的公开展示页：展示其输入、工作流、输出与能力边界。">
+    <meta name="theme-color" content="#121917">
+    <title>Steam 游戏机会初筛 Agent · 公开展示</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="hero shell" aria-labelledby="page-title">
+        <div class="eyebrow">AGENT / 01 · PUBLIC EXHIBIT</div>
+        <div class="hero-layout">
+          <div>
+            <p class="kicker">Steam 游戏机会初筛 Agent</p>
+            <h1 id="page-title">把一个 Steam 链接，<br><em>变成可核验的初筛意见。</em></h1>
+            <p class="lead">面向候选游戏的零成本机会初筛：确认身份、记录公开信号、输出边界清晰的 Markdown 结论。</p>
+            <div class="badges" aria-label="展示属性">
+              <span>公开展示版</span><span>不可调用</span><span>不连接真实数据</span>
+            </div>
+          </div>
+          <aside class="hero-note">
+            <span class="note-index">01</span>
+            <p>这是静态产品展示，不是在线服务。页面没有提交入口、账户权限、数据接口或后台任务。</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="demo-wrap" aria-labelledby="demo-title">
+        <div class="section-heading shell">
+          <p class="number">02</p>
+          <div><p class="kicker">固定演示</p><h2 id="demo-title">一次评估，应该怎样被交付？</h2></div>
+          <p class="section-copy">以下内容为前端固定样例，帮助理解交互与报告格式；不会发送链接，也不会生成真实结论。</p>
+        </div>
+        <div class="demo shell">
+          <div class="demo-top"><span class="dot"></span><span>Steam 游戏机会初筛 Agent</span><span class="demo-mode">STATIC DEMO</span></div>
+          <div class="chat">
+            <div class="message user"><span class="who">输入</span><p>https://store.steampowered.com/app/&lt;appid&gt;/</p></div>
+            <div class="message agent"><span class="who">Agent</span><p>已识别为标准 Steam 游戏链接。正在按公开信息进行初筛……</p></div>
+          </div>
+          <article class="report-card">
+            <div class="report-head"><span>初筛报告 / SAMPLE</span><strong>WATCH</strong></div>
+            <dl>
+              <div><dt>游戏身份</dt><dd>已从输入链接提取唯一 appid</dd></div>
+              <div><dt>公开信号</dt><dd>记录 Steam 官方事实与攻略相关搜索联想</dd></div>
+              <div><dt>交付判断</dt><dd>存在初步帮助类需求信号，建议人工继续复核</dd></div>
+            </dl>
+            <p class="report-footer">样例内容 · 不对应任何真实游戏或实时查询</p>
+          </article>
+          <button type="button" disabled aria-disabled="true">展示模式：不可提交</button>
+        </div>
+      </section>
+
+      <section class="shell capabilities" aria-labelledby="capabilities-title">
+        <div class="section-heading compact">
+          <p class="number">03</p>
+          <div><p class="kicker">工作方法</p><h2 id="capabilities-title">清楚输入，清楚停止。</h2></div>
+        </div>
+        <div class="grid-two">
+          <article class="panel input-panel">
+            <p class="panel-label">唯一输入</p>
+            <h3>Steam 官方游戏详情页链接</h3>
+            <code>store.steampowered.com/app/&lt;appid&gt;/...</code>
+            <p>链接无效、无法提取唯一 appid，或关键证据不可用时，Agent 会停止并说明原因，不自行猜测替代对象。</p>
+          </article>
+          <article class="panel output-panel">
+            <p class="panel-label">唯一输出</p>
+            <h3>一份可回看的 Markdown 初筛报告</h3>
+            <ul><li>游戏名称、appid 与查询时间</li><li>公开事实与搜索意图线索</li><li>结论、缺失项与人工下一步</li></ul>
+          </article>
+        </div>
+        <ol class="workflow">
+          <li><span>01</span><h3>提取身份</h3><p>验证链接格式并提取 appid。</p></li>
+          <li><span>02</span><h3>核验事实</h3><p>记录官方游戏信息。</p></li>
+          <li><span>03</span><h3>观察意图</h3><p>整理攻略与帮助类公开联想。</p></li>
+          <li><span>04</span><h3>形成报告</h3><p>记录事实、时间与缺失项。</p></li>
+          <li><span>05</span><h3>交给人判断</h3><p>交付结论，不替代业务决策。</p></li>
+        </ol>
+      </section>
+
+      <section class="boundary-section" aria-labelledby="boundary-title">
+        <div class="shell boundary-grid">
+          <div><p class="number">04</p><p class="kicker">能力边界</p><h2 id="boundary-title">它给出初筛，<br>不替人下注。</h2></div>
+          <div class="boundary-list">
+            <div><span>可以</span><p>输出 <strong>WATCH</strong> 或 <strong>REVIEW_REQUIRED</strong>，并说明证据与缺失项。</p></div>
+            <div><span>不会</span><p>建站、发布、购买、登录、绕过验证、使用付费数据源，或代替用户做最终立项决策。</p></div>
+            <div><span>不会公开</span><p>任何私有权限、聊天账号、配置、密钥、本地目录、真实报告或用户提交内容。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell trust" aria-labelledby="trust-title">
+        <div class="section-heading compact"><p class="number">05</p><div><p class="kicker">公开说明</p><h2 id="trust-title">这不是一个可被远程调用的机器人。</h2></div></div>
+        <div class="trust-grid">
+          <article><h3>页面安全</h3><p>纯静态文件，无用户表单、账户体系、追踪代码、后台服务或真实数据请求。</p></article>
+          <article><h3>运行状态</h3><p>私有运行环境已配置 Profile 与飞书消息入口；完整“链接到报告”链路仍应以私有环境中的实际报告为准。</p></article>
+          <article><h3>真实使用</h3><p>仅限经授权的私有飞书机器人。公开访问者可以了解能力，不能触发、查看或导出任何运行数据。</p></article>
+        </div>
+      </section>
+    </main>
+    <footer class="shell"><p>Steam 游戏机会初筛 Agent · Public Exhibit</p><p>静态展示，不提供调用权限。</p></footer>
+  </body>
+</html>
